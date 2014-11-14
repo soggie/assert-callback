@@ -27,9 +27,10 @@ describe('GIVEN assert is loaded as a module', function () {
     it('THEN it should return with no errors', function (done) {
 
       cass(true, 'Should pass', function (err) {
-        assert(err === null);
-        done();
+        assert(err === null);  
       });
+      
+      done();
 
     });
   });
@@ -50,7 +51,8 @@ describe('GIVEN assert is loaded as a module', function () {
     it('THEN it should return with no errors', function (done) {
 
       cass(true, 'Should pass');
-
+      done();
+      
     });
   });
 
