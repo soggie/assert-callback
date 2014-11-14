@@ -5,8 +5,8 @@ A drop-in replacement library that allows you to use asserts inside an async fun
 ## API Parity
 
   * `[X]` ... `assert(value, [message])`
-  * `[ ]` ... `assert.ok(value, [message])`
-  * `[ ]` ... `assert.equal(actual, expected, [message])`
+  * `[X]` ... `assert.ok(value, [message])`
+  * `[X]` ... `assert.equal(actual, expected, [message])`
   * `[ ]` ... `assert.notEqual(actual, expected, [message])`
   * `[ ]` ... `assert.deepEqual(actual, expected, [message])`
   * `[ ]` ... `assert.notDeepEqual(actual, expected, [message])`
