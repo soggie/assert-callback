@@ -7,7 +7,7 @@ A drop-in replacement library that allows you to use asserts inside an async fun
   * `[X]` ... `assert(value, [message])`
   * `[X]` ... `assert.ok(value, [message])`
   * `[X]` ... `assert.equal(actual, expected, [message])`
-  * `[ ]` ... `assert.notEqual(actual, expected, [message])`
+  * `[X]` ... `assert.notEqual(actual, expected, [message])`
   * `[ ]` ... `assert.deepEqual(actual, expected, [message])`
   * `[ ]` ... `assert.notDeepEqual(actual, expected, [message])`
   * `[ ]` ... `assert.strictEqual(actual, expected, [message])`
