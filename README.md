@@ -15,7 +15,6 @@ A simple library that allows you to use asserts inside an async function utilisi
   * `[ ]` ... `assert.notStrictEqual(actual, expected, [message])`
   * `[ ]` ... `assert.throws(block, [error], [message])`
   * `[ ]` ... `assert.doesNotThrow(block, [message])`
-  * `[ ]` ... `assert.ifError(value)`
 
 ## Installation
 
@@ -54,3 +53,7 @@ Here's an example of how you can use it in a real project, say, inside your MVC'
       // The rest of your code
       callback(null, 'Save completed!');
     }
+
+## Caveat
+
+Note: `assert.isEqual` functions the same as node's assert.
