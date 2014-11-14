@@ -1,0 +1,26 @@
+{
+  "name": "assert-callback",
+  "version": "0.1.0",
+  "description": "A drop-in replacement for node's assert that supports callbacks",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soggie/assert-callback.git"
+  },
+  "keywords": [
+    "assert",
+    "callback"
+  ],
+  "author": "Ruben L Z Tan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soggie/assert-callback/issues"
+  },
+  "homepage": "https://github.com/soggie/assert-callback"
+}
