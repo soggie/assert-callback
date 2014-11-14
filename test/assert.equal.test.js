@@ -3,31 +3,28 @@
 var assert = require('assert');
 
 //  GIVEN assert is loaded as a module
-//    WHEN assert() is called and the condition passes
+//    WHEN assert.equal() is called and the condition passes
 //    THEN it should return with no errors
 //    
-//    WHEN assert() is called and the condition fails
+//    WHEN assert.equal() is called and the condition fails
 //    THEN it should pass the exception to the callback
 //    
-//    WHEN assert() is called without a callback
+//    WHEN assert.equal() is called without a callback
 //     AND the condition passes
 //    THEN it should return with no errors
 //    
-//    WHEN assert() is called without a callback
+//    WHEN assert.equal() is called without a callback
 //     AND the condition fails
 //    THEN it should throw an error like normal asserts do
-//    
-//    WHEN assert() is called without the message parameter
-//     AND the condition fails
-//    THEN it should pass the exception to the callback
 describe('GIVEN assert is loaded as a module', function () {
   var cass = require('../lib');
 
-  describe('WHEN assert() is called and the condition passes', function () {
+  describe('WHEN assert.equal() is called and the condition passes', function () {
     it('THEN it should return with no errors', function (done) {
 
-      cass(true, 'Should pass', function (err) {
-        assert(err === null);  
+      cass.equal(true, true, 'Should pass', function (err) {
+        console.log(err);
+        assert(err === null);
       });
       
       setTimeout(function () {
@@ -37,11 +34,12 @@ describe('GIVEN assert is loaded as a module', function () {
     });
   });
 
-  describe('WHEN assert() is called and the condition fails', function () {
+  describe('WHEN assert.equal() is called and the condition fails', function () {
     it('THEN it should pass the exception to the callback', function (done) {
 
-      cass(false, 'Should fail', function (err) {
+      cass.equal(false, true, 'Should fail', function (err) {
         assert(err !== null);
+        console.log(err.message);
         assert(err.message === 'Should fail');
         done();
       });
@@ -49,10 +47,10 @@ describe('GIVEN assert is loaded as a module', function () {
     });
   });
 
-  describe('WHEN assert() is called without a callback AND the condition passes', function () {
+  describe('WHEN assert.equal() is called without a callback AND the condition passes', function () {
     it('THEN it should return with no errors', function (done) {
 
-      cass(true, 'Should pass');
+      cass.equal(true, true, 'Should pass');
       
       setTimeout(function () {
         done();
@@ -61,11 +59,11 @@ describe('GIVEN assert is loaded as a module', function () {
     });
   });
 
-  describe('WHEN assert() is called without a callback AND the condition fails', function () {
+  describe('WHEN assert.equal() is called without a callback AND the condition fails', function () {
     it('THEN it should throw an error like normal asserts do', function (done) {
 
       try {
-        cass(false, 'Should fail');
+        cass.equal(false, true, 'Should fail');
       } catch (err) {
         assert(err !== null);
         assert(err.message === 'Should fail');
@@ -75,10 +73,10 @@ describe('GIVEN assert is loaded as a module', function () {
     });
   });
 
-  describe('WHEN assert() is called without the message parameter AND the condition fails', function () {
+  describe('WHEN assert.equal() is called without the message parameter AND the condition fails', function () {
     it('THEN it should pass the exception to the callback', function (done) {
 
-      cass(false, function (err) {
+      cass.equal(false, true, function (err) {
         assert(err !== null);
         done();
       });

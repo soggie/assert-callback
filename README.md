@@ -1,10 +1,9 @@
 # assert-callback
 
-A simple library that allows you to use asserts inside an async function utilising callbacks
+A drop-in replacement library that allows you to use asserts inside an async function utilising callbacks to handle errors.
 
 ## API Parity
 
-  * `[ ]` ... `assert.fail(actual, expected, message, operator)`
   * `[X]` ... `assert(value, [message])`
   * `[ ]` ... `assert.ok(value, [message])`
   * `[ ]` ... `assert.equal(actual, expected, [message])`
@@ -56,7 +55,7 @@ Here's an example of how you can use it in a real project, say, inside your MVC'
 
 ## Caveat
 
-Note: `assert.isEqual` functions the same as node's assert.
+Note: `assert.isEqual` and `assert.fail` functions the same as node's assert, callback or not.
 
 ## MIT License
 
