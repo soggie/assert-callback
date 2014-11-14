@@ -2,20 +2,20 @@
 
 A simple library that allows you to use asserts inside an async function utilising callbacks
 
-## Status
+## API Parity
 
-  * `assert.fail(actual, expected, message, operator)`
-  * `assert(value, [message])` --> done (`test/assert.test.js`)
-  * `assert.ok(value, [message])`
-  * `assert.equal(actual, expected, [message])`
-  * `assert.notEqual(actual, expected, [message])`
-  * `assert.deepEqual(actual, expected, [message])`
-  * `assert.notDeepEqual(actual, expected, [message])`
-  * `assert.strictEqual(actual, expected, [message])`
-  * `assert.notStrictEqual(actual, expected, [message])`
-  * `assert.throws(block, [error], [message])`
-  * `assert.doesNotThrow(block, [message])`
-  * `assert.ifError(value)`
+  * `[ ]` ... `assert.fail(actual, expected, message, operator)`
+  * `[X]` ... `assert(value, [message])`
+  * `[ ]` ... `assert.ok(value, [message])`
+  * `[ ]` ... `assert.equal(actual, expected, [message])`
+  * `[ ]` ... `assert.notEqual(actual, expected, [message])`
+  * `[ ]` ... `assert.deepEqual(actual, expected, [message])`
+  * `[ ]` ... `assert.notDeepEqual(actual, expected, [message])`
+  * `[ ]` ... `assert.strictEqual(actual, expected, [message])`
+  * `[ ]` ... `assert.notStrictEqual(actual, expected, [message])`
+  * `[ ]` ... `assert.throws(block, [error], [message])`
+  * `[ ]` ... `assert.doesNotThrow(block, [message])`
+  * `[ ]` ... `assert.ifError(value)`
 
 ## Installation
 
