@@ -55,7 +55,7 @@ Here's an example of how you can use it in a real project, say, inside your MVC'
 
 ## Caveat
 
-Note: `assert.isEqual` and `assert.fail` functions the same as node's assert, callback or not.
+Note: `assert.throws`, `assert.doesNotThrow`, `assert.isEqual` and `assert.fail` functions the same as node's assert, callback or not.
 
 ## MIT License
 
